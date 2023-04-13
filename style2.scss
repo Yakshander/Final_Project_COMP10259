@@ -1,0 +1,144 @@
+$color1:white;
+$color2:yellow;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #545655a7;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: rgb(20, 21, 21);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  /* Form Styles */
+  form {
+    background-color: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #1E90FF;
+  }
+  
+  form textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  form button[type="submit"] {
+    background-color: rgb(20, 21, 21);
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  a{
+     color: $color2;
+  }
+  a:hover{
+    color: $color1;
+  }
+  button{
+    background-color: red($color: 4);
+  }
+  form button[type="submit"]:hover {
+    background-color: #0066cc;
+  }
+  
+  /* Validation Styles */
+  form input:invalid,
+  form textarea:invalid {
+    border-color: red;
+  }
+  
+  form input:valid,
+  form textarea:valid {
+    border-color: green;
+  }
+  
+  form input[type="text"]:invalid:focus,
+  form input[type="email"]:invalid:focus,
+  form textarea:invalid:focus {
+    border-color: red;
+    outline: none;
+  }
+  
+  form input[type="text"]:valid:focus,
+  form input[type="email"]:valid:focus,
+  form textarea:valid:focus {
+    border-color: green;
+    outline: none;
+  }
+  
+  form input:invalid + .error-message,
+  form textarea:invalid + .error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  /* Media queries */
+  @media screen and (min-width: 768px) {
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  
+    form label {
+      margin-top: 10px;
+    }
+  
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+    }
+    nav{
+        top:0;
+
+    }
+  }
